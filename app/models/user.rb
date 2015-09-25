@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   authenticates_with_sorcery!
   has_many :posts
 
-  attr_accessible :email, :password, :pasword_confirmation
+  attr_accessible :email, :password, :password_confirmation
 
   validates_confirmation_of :password
   validates_presence_of :password, :on => :create

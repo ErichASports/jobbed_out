@@ -1,6 +1,6 @@
 <h1>LOG IN</h1>
 
-<%= form_tag sessions_path do %>
+<%= form_tag session_path do %>
 	<div class="field">
 		<%= label_tag :email %>
 		<%= text_field_tag :email, params[:email] %>
@@ -10,7 +10,7 @@
 		<%= password_field_tag :password %>
 	</div>
 	<div class="field">
-		<%= check_box_tag :remember_me, 1, parms[:remember_me] %>
+		<%= check_box_tag :remember_me, 1, params[:remember_me] %>
 		<%= label_tag :remember_me %>
 	</div>
 	<div class="actions"><%= submit_tag "log in" %> </div>

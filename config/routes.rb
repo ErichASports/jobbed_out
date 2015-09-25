@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :posts
   resources :users
   resource :session
-  root :to => "home#index"
+  root :to => "posts#index"
 end   
 
 
