@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
 
-
+  get "logout" => "sessions#destroy", :as => "logout"
+  get "login" => "session#new", :as => "login"
+   get "signup" => "users#new", :as => "signup"
   resources :posts
   resources :users, :except => [:index, :destroy, :edit, :update]
-
   resource :session, :only => [:new, :create, :destroy]
+  root :to => "home#index"
+end   
 
 
   # The priority is based upon order of creation: first created -> highest priority.
