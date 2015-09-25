@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   get "login" => "session#new", :as => "login"
    get "signup" => "users#new", :as => "signup"
   resources :posts
-  resources :users, :except => [:index, :destroy, :edit, :update]
-  resource :session, :only => [:new, :create, :destroy]
+  resources :users
+  resource :session
   root :to => "home#index"
 end   
 
@@ -63,5 +63,3 @@ end
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
-  #   end
-end
